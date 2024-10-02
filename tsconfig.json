@@ -3,7 +3,6 @@
       "strict": true,
       "target": "ES2020",
       "moduleResolution": "node",
-      "allowSyntheticDefaultImports": true,
       "allowJs": true,
       "outDir": "HACK_BECAUSE_OF_ALLOW_JS"
     }

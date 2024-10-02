@@ -21,8 +21,8 @@ export const login=async()=>{
         identityProvider: IDENTITY_PROVIDER,
         onSuccess: async()=>{
            window.auth.isAuthenticated = await authClient.isAuthenticated();
-           await  window.location.reload();
-            window.location.href = '/Dashboard';
+           window.location.reload();
+          
            
         },
     });
