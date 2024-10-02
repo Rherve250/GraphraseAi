@@ -15,11 +15,16 @@
             "gzip": true
         },
        "backend":{
-        "type":"azle",
-        "main": "src/backend/app.ts",
+        "type":"custom",
+        "main": "src/backend/src/index.ts",
+        "candid": "src/backend/src/index.did",
+        "build": "node_modules/.bin/azle compile backend",
+        "wasm": ".azle/backend/backend.wasm",
         "custom": {
             "experimental": true
-        }
+        },
+        "gzip": true
+        
        },
        "internet_identity": {
         "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",

@@ -3,25 +3,21 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
+  root: path.resolve(__dirname, 'src/frontend'),
   plugins: [react()],
   css: {
-    postcss: path.resolve(__dirname, 'src/frontend/postcss.config.js'),  // Point to the new PostCSS config path
+    postcss: path.resolve(__dirname, 'src/frontend/postcss.config.js'), 
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src/frontend/src'),  // Alias for your main code
+      '@': path.resolve(__dirname, 'src/frontend/src'),
     },
   },
   build: {
-    outDir: path.resolve(__dirname, 'dist'),  // Output to dist folder in root
+    outDir: path.resolve(__dirname, 'dist'),
   },
   server: {
-    open: true,  // Ensure it opens with the root index.html
+    open: true,
+
   },
 });
-
-
-
-
-
-

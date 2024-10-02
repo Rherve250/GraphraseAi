@@ -1,0 +1,8 @@
+service: () -> {
+    MyContent: () -> (variant {Ok:vec record {id:text; status:text; userNote:text; userId:principal; createdAt:text; updatedAt:text; AiNote:text; category:text}; Err:variant {Error:text; NotAllowed:text; NotFound:text; Success:text}}) query;
+    createContent: (record {userNote:text; AiNote:text; category:text}) -> (variant {Ok:vec record {id:text; status:text; userNote:text; userId:principal; createdAt:text; updatedAt:text; AiNote:text; category:text}; Err:variant {Error:text; NotAllowed:text; NotFound:text; Success:text}});
+    deleteContent: (text) -> (variant {Ok:text; Err:variant {Error:text; NotAllowed:text; NotFound:text; Success:text}});
+    getOneContent: (text) -> (variant {Ok:record {id:text; status:text; userNote:text; userId:principal; createdAt:text; updatedAt:text; AiNote:text; category:text}; Err:variant {Error:text; NotAllowed:text; NotFound:text; Success:text}}) query;
+    message: () -> (text) query;
+    updateContent: (record {userNote:text; AiNote:text; category:text}, text) -> (variant {Ok:text; Err:variant {Error:text; NotAllowed:text; NotFound:text; Success:text}});
+}
